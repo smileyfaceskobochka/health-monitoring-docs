@@ -1,0 +1,32 @@
+# Core LaTeX auxiliary files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.pdfsync
+
+# Minted package cache
+_minted*/
+_minted-*/
+
+# Pythontex auxiliary files
+pythontex-files-*/
+*.pytxcode
+
+# Biber / BibTeX
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+
+# Glossaries
+*.ist
+*.glo
+*.gls
+*.glg
+
+# Compiled PDFs (optional, uncomment to ignore)
+# *.pdf

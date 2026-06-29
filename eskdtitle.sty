@@ -1,0 +1,225 @@
+% Copyright 2006 Konstantin Korikov <lostclus@ua.fm>
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2003/12/01 or later.
+%
+% This work has the LPPL maintenance status "maintained".
+% 
+% This Current Maintainer of this work is Konstantin Korikov.
+%
+% This work consists of all files listed in manifest.txt.
+%
+
+%
+% This is automaticaly generated file, do not edit it.
+%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{eskdtitle}[2010/01/14 v0.98 Title GOST 2.105]
+
+\RequirePackage{eskdstamp}
+\RequirePackage{eskdlang}
+\RequirePackage{eskdinfo}
+\RequirePackage{eskdtitlebase}
+
+\newcommand{\ESKD@title@split@field}[2]{%
+  \parbox[t]{.4\hsize}{\raggedright#1}\hfill
+  \parbox[t]{.4\hsize}{\raggedright#2}}
+
+\renewcommand{\ESKDtheTitleFieldI}{%
+  \ESKDtheDepartment\par\ESKDtheCompany}
+
+\def\ESKDtheTitleFieldIIl{}
+\renewcommand{\ESKDtheTitleFieldIIl}{%
+  \ESKDtheClassCode}
+\def\ESKDtheTitleFieldIIr{}
+\renewcommand{\ESKDtheTitleFieldIIr}{}
+\renewcommand{\ESKDtheTitleFieldII}{%
+  \ESKD@title@split@field{\ESKDtheTitleFieldIIl}{\ESKDtheTitleFieldIIr}}
+
+\def\ESKDtheTitleFieldIIIl{}
+\renewcommand{\ESKDtheTitleFieldIIIl}{%
+  \ifx\ESKD@title@approving@sheet\@undefined
+    \expandafter\ifx\csname ESKD@title@agreed@name@1\endcsname\relax\else
+      \textbf{\MakeUppercase{\ESKDagreedName}}\\
+      \ESKD@title@make@stamp{agreed}{1}
+    \fi
+  \else
+    \textbf{\MakeUppercase{\ESKDapprovedName}}\\
+    \ESKD@title@approving@sheet
+  \fi}
+\def\ESKDtheTitleFieldIIIr{}
+\renewcommand{\ESKDtheTitleFieldIIIr}{%
+  \ifx\ESKD@title@approving@sheet\@undefined
+    \expandafter\ifx\csname ESKD@title@approved@name@1\endcsname\relax\else
+      \textbf{\MakeUppercase{\ESKDapprovingName}}\\
+      \ESKD@title@make@stamp{approved}{1}
+    \fi
+  \fi}
+\renewcommand{\ESKDtheTitleFieldIII}{%
+  \ESKD@title@split@field{\ESKDtheTitleFieldIIIl}{\ESKDtheTitleFieldIIIr}}
+
+\renewcommand{\ESKDtheTitleFieldIV}{%
+  \MakeUppercase{\ESKDtheTitle}\par\ESKDtheDocName}
+
+\renewcommand{\ESKDtheTitleFieldV}{}
+
+\renewcommand{\ESKDtheTitleFieldVI}{%
+  \MakeUppercase{\ESKDtheSignature}}
+
+\renewcommand{\ESKDtheTitleFieldVII}{}
+
+\def\ESKDtheTitleFieldVIIIl{}
+\renewcommand{\ESKDtheTitleFieldVIIIl}{%
+  \ifx\ESKD@title@approving@sheet\@undefined
+    \ESKD@tmpcnta = 1
+    \loop
+    \ifnum \ESKD@tmpcnta < \ESKD@title@agreed@cnt
+      \advance \ESKD@tmpcnta 1
+      \ESKD@title@make@stamp{agreed}{\number\ESKD@tmpcnta}
+      \par\vspace{5mm}
+    \repeat
+  \fi}
+\def\ESKDtheTitleFieldVIIIr{}
+\renewcommand{\ESKDtheTitleFieldVIIIr}{%
+  \ifx\ESKD@title@approving@sheet\@undefined
+    \ESKD@tmpcnta = 0
+    \loop
+    \ifnum \ESKD@tmpcnta < \ESKD@title@designed@cnt
+      \advance \ESKD@tmpcnta 1
+      \ESKD@title@make@stamp{designed}{\number\ESKD@tmpcnta}
+      \par\vspace{5mm}
+    \repeat
+  \fi}
+\renewcommand{\ESKDtheTitleFieldVIII}{%
+  \ESKD@title@split@field{\ESKDtheTitleFieldVIIIl}{\ESKDtheTitleFieldVIIIr}}
+
+\renewcommand{\ESKDtheTitleFieldX}{\ESKDtheYear}
+
+\renewcommand{\ESKDtitleFontI}{\ESKDfontV}
+\renewcommand{\ESKDtitleFontII}{\ESKDfontIII}
+\renewcommand{\ESKDtitleFontIII}{%
+  \ESKDfontIII\renewcommand{\baselinestretch}{1.50}\selectfont}
+\renewcommand{\ESKDtitleFontIV}{\ESKDfontV}
+\renewcommand{\ESKDtitleFontV}{\ESKDfontV}
+\renewcommand{\ESKDtitleFontVI}{\ESKDfontV}
+\renewcommand{\ESKDtitleFontVII}{\ESKDfontIII}
+\renewcommand{\ESKDtitleFontVIII}{%
+  \ESKDfontIII\renewcommand{\baselinestretch}{1.25}\selectfont}
+\renewcommand{\ESKDtitleFontX}{\ESKDfontV}
+
+\renewcommand{\maketitle}{%
+  \begin{ESKDtitlePage}
+  
+  % ============================================================
+  % РИСОВАНИЕ РАМКИ И ТАБЛИЦ (TikZ)
+  % ============================================================
+  \begin{tikzpicture}[remember picture, overlay, every node/.style={font=\small}]
+  
+  % Параметры страницы
+  \setlength{\paperwidth}{210mm}
+  \setlength{\paperheight}{297mm}
+  
+  % ============================================================
+  % 1. ОСНОВНАЯ РАМКА (правая часть, 185мм ширина)
+  % ============================================================
+  \def\frameX{20mm}           % отступ слева (под переплёт)
+  \def\frameY{5mm}            % отступ снизу
+  \def\frameW{185mm}          % ширина рамки
+  \def\frameH{287mm}          % высота рамки (297-5-5)
+  
+  % Толстая внешняя рамка
+  \draw[line width=0.4mm] 
+    ([xshift=\frameX, yshift=\frameY] current page.south west) 
+    rectangle ++(\frameW, \frameH);
+
+  \end{tikzpicture}
+  
+  % ============================================================
+  % ОСНОВНОЕ СОДЕРЖАНИЕ ТИТУЛЬНОГО ЛИСТА
+  % ============================================================
+  \setlength{\topsep}{0mm}
+  \noindent
+  \parbox[c][.28\vsize][t]{\hsize}{%
+    \begin{center}
+МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ
+
+Федеральное государственное бюджетное образовательное учреждение высшего образования
+
+\textbf{«Вятский государственный университет»}\\\textbf{(ФГБОУ ВО <<ВятГУ>>)}
+
+Факультет автоматики и вычислительной техники
+
+Кафедра электронных вычислительных машин
+\end{center}
+\begin{flushright}
+  Допущено к защите\\
+  Заведующий кафедрой ЭВМ\\
+  \underline{\hspace{15mm}}/Долженкова М. Л./\\
+  <<\underline{\hspace{5mm}}>>\underline{\hspace{15mm}}2026г.
+\end{flushright}
+\vspace*{5mm}
+\begin{center}
+Персонализированный мониторинг и коррекция состояния здоровья на основе биометрических данных \\
+\vspace*{5mm}
+Пояснительная записка курсового проекта по дисциплине\\ <<Цифровая схемотехника>>\\ ТПЖА.090301.838 ПЗ   
+\end{center}
+\vspace*{10mm}
+\noindent
+\begin{tabular*}{\hsize}{@{}l@{\extracolsep{\fill}}l@{\extracolsep{0pt}\hspace{3mm}}l@{}}
+Разработали & \underline{\hspace{23mm}} & /Черкасов А. А./ \\
+            & \underline{\hspace{23mm}} & /Зинин В. А./ \\[3mm]
+Руководитель & \underline{\hspace{23mm}} & /Коротких Д. А./ \\
+Консультант & \underline{\hspace{23mm}} & /Мельцов В. Ю./
+\end{tabular*}
+
+\vspace*{3mm}
+\noindent
+\begin{tabular*}{\hsize}{@{}l@{\extracolsep{\fill}}c@{\extracolsep{0pt}\hspace{5mm}}c@{\hspace{2mm}}}
+Проект защищен с оценкой & <<\underline{\hspace{25mm}}>> & \underline{\hspace{25mm}} \\
+                         & \small{(оценка)} & \small{(дата)}
+\end{tabular*}
+
+\vspace*{3mm}
+\noindent
+\begin{tabular*}{\hsize}{@{}l@{\extracolsep{\fill}}c@{\extracolsep{0pt}\hspace{5mm}}c@{}}
+Члены комиссии & \underline{\hspace{30mm}} & /\underline{\hspace{30mm}}/ \\
+               & \small{(подпись)} & \small{(ФИО)} \\[2mm]
+               & \underline{\hspace{30mm}} & /\underline{\hspace{30mm}}/ \\
+               & \small{(подпись)} & \small{(ФИО)} \\[2mm]
+               & \underline{\hspace{30mm}} & /\underline{\hspace{30mm}}/ \\
+               & \small{(подпись)} & \small{(ФИО)}
+\end{tabular*}
+
+\vspace*{0mm}
+\begin{center}
+Киров 2026
+\end{center}
+}
+\newpage
+\begin{center}
+Реферат
+\end{center}  
+
+Черкасов А. А., Зинин В. А. Персонализированный мониторинг и коррекция состояния здоровья на основе биометрических данных ТПЖА.090301.838 ПЗ: Курс. проект / ВятГУ, каф. ЭВМ; рук. Коротких Д. А., конс. Мельцов В. Ю. - Киров, 2026. – ПЗ 43с, 1 рис., 3 табл., 5 прил.
+
+БИОСИГНАЛЫ, МОНИТОРИНГ ЗДОРОВЬЯ, БИОМЕТРИЧЕСКИЕ ДАННЫЕ, МАШИННОЕ ОБУЧЕНИЕ, КОМПЬЮТЕРНОЕ ЗРЕНИЕ
+
+\vspace*{20mm}
+
+Объектом исследования являются физиологические показатели человека и методы их регистрации.
+
+Предметом исследования выступают алгоритмы сбора данных с ESP32-S3, ИИ-модели классификации и видеоанализ MediaPipe.
+
+Целью работы является проектирование доступного программно-аппаратного комплекса персонализированного мониторинга и коррекции состояния здоровья пользователя на основе биометрических данных. Система призвана собирать сырые биосигналы (пульс, электромиограмма — ЭМГ, электроэнцефалограмма — ЭЭГ, кожно-гальваническая реакция — КГР/GSR) с носимых устройств на базе микроконтроллера ESP32-S3, обрабатывать их с помощью алгоритмов машинного обучения и предоставлять пользователю наглядный анализ состояния (уровень стресса, утомление, фазы восстановления) через интерактивный веб-интерфейс, а также давать персональные рекомендации по восстановлению и тренировкам.
+
+Результатом выполнения курсового проекта стал программно-аппаратный комплекс, позволяющий отслеживать биосигналы в реальном времени, оценивать уровень стресса и правильность выполнения упражнений.
+
+В перечень графического материала входят: диаграмма развертывания, алгоритм функционирования устройства, схема электрическая принципиальная, структура интерфейса.
+ 
+  \end{ESKDtitlePage}}
