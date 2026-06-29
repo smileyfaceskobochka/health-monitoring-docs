@@ -1,0 +1,114 @@
+<mxfile host="Electron">
+  <diagram name="Схема функц. устр." id="XB0wx1GPa3ttHWTqnRi2">
+    <mxGraphModel dx="2798" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-23" edge="1" parent="1" source="g5H2Dz2ncTlzvl0gXgOT-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;" target="g5H2Dz2ncTlzvl0gXgOT-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-24" connectable="0" parent="g5H2Dz2ncTlzvl0gXgOT-23" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="WiFi UDP" vertex="1">
+          <mxGeometry relative="1" x="0.0145" as="geometry">
+            <mxPoint x="2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=JetBrainsMono Nerd Font;fontSize=12;" value="Микроконтроллер&lt;br&gt;ESP32-S3&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 9px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;- Опрос каналов АЦП (100–500 Гц).&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 9px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;- Формирование кадров данных.&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 9px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;- Расчет контрольной суммы.&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 9px; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp;- Отправка по UDP.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="160" x="320" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-16" edge="1" parent="1" source="g5H2Dz2ncTlzvl0gXgOT-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;entryX=0.997;entryY=0.625;entryDx=0;entryDy=0;entryPerimeter=0;" target="g5H2Dz2ncTlzvl0gXgOT-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="385" />
+              <mxPoint x="550" y="355" />
+            </Array>
+            <mxPoint x="480" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-21" connectable="0" parent="g5H2Dz2ncTlzvl0gXgOT-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="АЦП" vertex="1">
+          <mxGeometry relative="1" x="0.2319" y="1" as="geometry">
+            <mxPoint x="-9" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=JetBrainsMono Nerd Font;fontSize=12;" value="Модуль датчика EMG&lt;br&gt;(акт. мыщц)" vertex="1">
+          <mxGeometry height="70" width="90" x="570" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-15" edge="1" parent="1" source="g5H2Dz2ncTlzvl0gXgOT-4" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.366;entryDx=0;entryDy=0;entryPerimeter=0;" target="g5H2Dz2ncTlzvl0gXgOT-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="295" />
+              <mxPoint x="550" y="324" />
+            </Array>
+            <mxPoint x="480" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-20" connectable="0" parent="g5H2Dz2ncTlzvl0gXgOT-15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=default;" value="АЦП" vertex="1">
+          <mxGeometry relative="1" x="-0.1117" y="1" as="geometry">
+            <mxPoint x="-29" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=JetBrainsMono Nerd Font;fontSize=12;" value="Модуль датчика EEG&lt;br&gt;(акт. мозга)" vertex="1">
+          <mxGeometry height="70" width="90" x="570" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-14" edge="1" parent="1" source="g5H2Dz2ncTlzvl0gXgOT-5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.003;entryY=0.147;entryDx=0;entryDy=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;entryPerimeter=0;" target="g5H2Dz2ncTlzvl0gXgOT-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="205" />
+              <mxPoint x="520" y="298" />
+              <mxPoint x="481" y="298" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-19" connectable="0" parent="g5H2Dz2ncTlzvl0gXgOT-14" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="АЦП" vertex="1">
+          <mxGeometry relative="1" x="-0.0486" y="1" as="geometry">
+            <mxPoint x="-1" y="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=JetBrainsMono Nerd Font;fontSize=12;" value="Модуль датчика GSR&lt;br&gt;(сопр. кожи)" vertex="1">
+          <mxGeometry height="70" width="90" x="570" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-17" edge="1" parent="1" source="g5H2Dz2ncTlzvl0gXgOT-6" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeWidth=2;edgeStyle=orthogonalEdgeStyle;entryX=0.999;entryY=0.822;entryDx=0;entryDy=0;entryPerimeter=0;" target="g5H2Dz2ncTlzvl0gXgOT-1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="475" />
+              <mxPoint x="520" y="379" />
+              <mxPoint x="480" y="379" />
+            </Array>
+            <mxPoint x="480" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-22" connectable="0" parent="g5H2Dz2ncTlzvl0gXgOT-17" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="АЦП" vertex="1">
+          <mxGeometry relative="1" x="0.4068" y="-2" as="geometry">
+            <mxPoint x="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=JetBrainsMono Nerd Font;fontSize=12;" value="Модуль датчика PPG&lt;br&gt;(пульс)" vertex="1">
+          <mxGeometry height="70" width="90" x="570" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-25" edge="1" parent="1" source="g5H2Dz2ncTlzvl0gXgOT-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=2;" target="g5H2Dz2ncTlzvl0gXgOT-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-26" edge="1" parent="1" source="g5H2Dz2ncTlzvl0gXgOT-7" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;strokeWidth=2;" target="g5H2Dz2ncTlzvl0gXgOT-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=JetBrainsMono Nerd Font;fontSize=12;" value="Сервер&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;- Прием UDP-датаграмм и валидация.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;- Цифровая фильтрация (DSP): полосовые фильтры, режекторный фильтр 50 Гц.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;- Инференс ИИ-модели.&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&amp;nbsp;- Запись сессий в БД SQLite.&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="160" x="80" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-29" edge="1" parent="1" source="g5H2Dz2ncTlzvl0gXgOT-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.01;exitY=0.353;exitDx=0;exitDy=0;entryX=0.002;entryY=0.351;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;strokeWidth=2;" target="g5H2Dz2ncTlzvl0gXgOT-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=2;fontFamily=JetBrainsMono Nerd Font;fontSize=12;" value="Клиент&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&amp;nbsp;- Отрисовка веб-интерфейса.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&amp;nbsp;- Визуализация живых графиков.&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&amp;nbsp;- Интерфейс обратной связи для дообучения ИИ.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="160" x="-190" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-32" edge="1" parent="1" source="g5H2Dz2ncTlzvl0gXgOT-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1.013;exitY=0.865;exitDx=0;exitDy=0;entryX=0.003;entryY=0.874;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;strokeWidth=2;" target="g5H2Dz2ncTlzvl0gXgOT-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-33" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=JetBrainsMono Nerd Font;fontSize=8;labelBorderColor=none;labelBackgroundColor=default;" value="WebSockets&lt;br&gt;для real-time данных" vertex="1">
+          <mxGeometry height="29" width="60" x="-5" y="299" as="geometry" />
+        </mxCell>
+        <mxCell id="g5H2Dz2ncTlzvl0gXgOT-34" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=JetBrainsMono Nerd Font;fontSize=8;labelBorderColor=none;labelBackgroundColor=default;" value="HTTP/REST API&lt;br&gt;(авторизация и история)" vertex="1">
+          <mxGeometry height="29" width="60" x="-6" y="365" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

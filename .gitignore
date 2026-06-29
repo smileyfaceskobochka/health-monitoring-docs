@@ -30,3 +30,4 @@ pythontex-files-*/
 
 # Compiled PDFs (optional, uncomment to ignore)
 # *.pdf
+.$schemes.drawio.bkp
